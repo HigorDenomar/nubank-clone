@@ -1,5 +1,5 @@
 <h3 align="center">
-   🟣 Nubank Clone 🟣
+   Nubank Clone 🟣
 </h3>
 
 <div align="center">
@@ -13,4 +13,4 @@ ___
 #### Bibliotecas utilizadas:
 - styled-components
 - react-native-gesture-handler
-- react-native-qrcode
+- react-native-qrcode-svg

@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from '@expo/vector-icons/MaterialIcons'
 
-import QRCode from 'react-native-qrcode'
+import QRCode from 'react-native-qrcode-svg'
 import {
   Container,
   Code,
@@ -26,8 +26,8 @@ export default function Menu({ translateY }) {
         <QRCode
           value="https://github.com.br/higordenomar"
           size={80}
-          fgColor="#fff"
-          bgColor="#8B10AE"
+          color="#8B10AE"
+          backgroundColor="#FFF"
         />
       </Code>
 
