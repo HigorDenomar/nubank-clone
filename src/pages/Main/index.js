@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-import { Animated } from 'react-native'
+import { Animated, TouchableOpacity } from 'react-native'
 import { PanGestureHandler, State } from 'react-native-gesture-handler'
 
 import {
@@ -67,6 +67,8 @@ export default function Main() {
     }
   }
 
+  const [visibility, setVisibility] = useState(true)
+
   return(
     <Container>
       <Header/>
@@ -92,11 +94,18 @@ export default function Main() {
                 <Icon name="attach-money" size={28} color="#888" />
                 <TextTitleCard>NuConta</TextTitleCard>
               </TitleCard>
-              <Icon name="visibility-off" size={28} color="#888" />
+
+              <TouchableOpacity
+                onPress={()=>{setVisibility(!visibility)}}
+              >
+                {visibility ? <Icon name="visibility-off" size={28} color="#888" /> : <Icon name="visibility" size={28} color="#888" />}
+                
+              </TouchableOpacity>
             </CardHeader>
             <CardContent>
               <Title>Saldo disponível</Title>
-              <Description>R$ 4.589,72</Description>
+              {visibility ? <Description>R$ 4.589,72</Description> : <Description style={{opacity: 0,}}>R$ 4.589,72</Description> }
+              
             </CardContent>
             <CardFooter>
               <Annotation>
